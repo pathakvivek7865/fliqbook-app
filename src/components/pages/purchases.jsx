@@ -21,6 +21,9 @@ export default () => {
   };
 
   const sendData = async (e) => {
+    if (e === undefined || e === null) {
+      return;
+    }
     e.preventDefault();
     console.log(data);
 
