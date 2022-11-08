@@ -6,18 +6,21 @@ function Input({
   label,
   id,
 }: {
-  handleChange: Function;
+  handleChange:any;
   label: string;
-  id:string
+  id: string;
 }) {
   return (
     <TInput
-      id="name"
+      id = {id}
       variant="outlined"
       label={label}
       className="w-full bg-gray-450"
       onChange={(e) => {
-        handleChange({ key: e.target.id, value: e.target.value });
+        handleChange({
+          key: `${id}` ?? "name",
+          value: e.target.value ?? "",
+        });
       }}
     />
   );

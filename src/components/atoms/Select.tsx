@@ -8,7 +8,7 @@ function Select({
   options,
   id,
 }: {
-  handleChange: Function;
+  handleChange: any;
   label: string;
   arrow?: any;
   options: { value: string; name: string }[];
@@ -21,7 +21,7 @@ function Select({
       className="w-full appearance-none bg-gray-450"
       arrow={arrow ?? null}
       onChange={(e) => {
-        handleChange({ key: [id], value: e });
+        handleChange({ key: `${id}`, value: e ?? "" });
       }}
     >
       {options.map((option) => (

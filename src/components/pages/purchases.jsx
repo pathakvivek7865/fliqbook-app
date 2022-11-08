@@ -10,32 +10,35 @@ export default () => {
     maritalStatus: "",
   });
 
-  const handleChange = (e) => {
-    console.log(e);
-    const key = e.key;
-    const value = e.value;
+  function handleChange(event) {
+    if (event === undefined || event === null) {
+      return;
+    }
+    const key = event.key;
+    const value = event.value;
     setData((values) => ({
       ...values,
       [key]: value,
     }));
-  };
+  }
 
-  const sendData = async (e) => {
-    if (e === undefined || e === null) {
-      return;
-    }
+  async function sendData(e) {
     e.preventDefault();
     console.log(data);
 
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-    return response.json();
-  };
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      return response.json();
+    } catch (e) {
+      console.error(e);
+    }
+  }
 
   return (
     <main className="flex bg-dark italic text-gray-470 min-h-screen justify-center items-center">

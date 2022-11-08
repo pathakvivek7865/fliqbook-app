@@ -37,7 +37,6 @@ function NameCard({ sendData, handleChange }) {
             <Select
               id="maritalStatus"
               label="Marital Status"
-              arrow={<></>}
               handleChange={handleChange}
               options={[
                 { value: "married", name: "Married" },
