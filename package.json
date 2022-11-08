@@ -1,0 +1,52 @@
+{
+  "name": "fliqbook-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel serve src/index.html -p 8080",
+    "build": "parcel build --dist-dir dist src/index.html",
+    "clean": "rm -rf .parcel-cache dist",
+    "deploy": "firebase deploy --only hosting:app-fliqbook",
+    "deploy:staging": "firebase hosting:channel:deploy staging",
+    "emulator": "firebase emulators:start",
+    "emulator:prod": "firebase emulators:start --import=./local --export-on-exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oztek22/fliqbook-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oztek22/fliqbook-app/issues"
+  },
+  "homepage": "https://github.com/oztek22/fliqbook-app#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.7.0",
+    "postcss": "^8.4.16",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.1.8"
+  },
+  "dependencies": {
+    "@material-tailwind/react": "^1.2.4",
+    "@tailwindcss/forms": "^0.5.3",
+    "chart.js": "^3.9.1",
+    "dotenv": "^16.0.3",
+    "firebase": "^9.13.0",
+    "jszip": "^3.10.1",
+    "leven": "^4.0.0",
+    "lz-string": "^1.4.4",
+    "moment": "^2.29.4",
+    "papaparse": "^5.3.2",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "browserslist": [
+    "last 2 Chrome versions"
+  ]
+}

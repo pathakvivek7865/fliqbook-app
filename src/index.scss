@@ -1,0 +1,57 @@
+body {
+    font-size: 16px;
+    color: #474F64;
+    font-weight: 400;
+}
+.container {
+    max-width: 1350px;
+    padding: 0 15px;
+}
+// select {
+//     background: url(./components/atoms/images/select-arrow.svg) no-repeat center right 12px;
+// }
+.custom-table {
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #D6D4D0;
+        @media (min-width: 1024px) {
+            padding: 30px 12px;
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                padding-left: 30px;
+            }
+        }
+    }
+    th {
+        padding: 12px;
+        border-bottom: 1px solid #D6D4D0;
+        @media (min-width: 1024px) {
+            &:first-child {
+                padding-left: 30px;
+            }
+            &:last-child {
+                padding-left: 30px;
+            }
+        }
+    }
+}
+.custom-accordion {
+    .overflow-hidden {
+        > div {
+            padding: 0 0 0;
+        }
+    }
+}
+.sidebar-link.active {
+    background: rgba(62, 174, 91, 0.4);
+    color: #3EAE5B;
+}
+.canvas-container {
+    canvas {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 500px;
+    }
+}
